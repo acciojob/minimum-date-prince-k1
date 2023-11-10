@@ -1,5 +1,19 @@
 function minDate(dates) {
   //write you code here
+	let arr = [];
+	for(let i = 0; i < dates.length; i++){
+		arr.push(parseInt(dates[i].split('/').join('')));
+	}
+	let min = Math.min(...arr);
+	let ind = 0;
+	for(let i = 0; i < arr.length; i++){
+		if(arr[i] == min){
+			ind = i;
+		}
+	}
+	return dates[ind];
+	
+	
 }
 
 // Do not change the code
